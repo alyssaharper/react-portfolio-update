@@ -1,13 +1,15 @@
-import logo from './logo.svg';
-import './App.scss';
 import { Routes, Route } from 'react-router';
+import Home from './components/Home';
 import Layout from './components/Layout';
+import './App.scss';
 
 function App() {
   return (
     <>
     <Routes>
-      <Route path='/' element={<Layout />} />
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
     </Routes>
     </>
   );
